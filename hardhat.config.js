@@ -21,48 +21,48 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: {
-      compilers: [
-          {
-              version: "0.8.4",
-              settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 500,
-                  },
-              },
+    compilers: [
+      {
+        version: "0.8.4",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 500,
           },
-          {
-              version: "0.7.6",
-              settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 500,
-                  },
-              },
+        },
+      },
+      {
+        version: "0.7.6",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 500,
           },
-          {
-              version: "0.4.23",
-              settings: {
-                  optimizer: {
-                      enabled: true,
-                      runs: 500,
-                  },
-              },
+        },
+      },
+      {
+        version: "0.4.23",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 500,
           },
-      ],
+        },
+      },
+    ],
   },
   networks: {
     localhost: {
-        chainId: 31337, // Chain ID should match the hardhat network's chainid
-        forking: {
-            url: `https://mainnet.infura.io/v3/7fc5b156ba264dc7a266365c52d9e6c7`,
-        },
-        loggingEnabled: true,
+      chainId: 31337, // Chain ID should match the hardhat network's chainid
+      forking: {
+        url: `https://mainnet.infura.io/v3/XXXXXXXXXXXXXXXXXXX`,
+      },
+      loggingEnabled: true,
     },
     hardhat: {
-        forking: {
-            url: `https://mainnet.infura.io/v3/7fc5b156ba264dc7a266365c52d9e6c7`,
-        },
+      forking: {
+        url: `https://mainnet.infura.io/v3/XXXXXXXXXXXXXXXXXXXX`,
+      },
     },
   },
   gasReporter: {
