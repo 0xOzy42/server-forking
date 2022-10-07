@@ -21,31 +21,47 @@ class TestHelper {
 
   _deployContract = async (users) => {
     const daiAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
+    const wethAddress = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
 
+    const weth = await ethers.getContractAt(
+      "contracts/interfaces/IERC20.sol:IERC20",
+      wethAddress
+    );
     const dai = await ethers.getContractAt(
       "contracts/interfaces/IERC20.sol:IERC20",
       daiAddress
     );
 
-    //Impersonate to get DAI
-    const holder_dai = "0x075e72a5eDf65F0A5f44699c7654C1a76941Ddc8"; //Avax Bridge : 250 M Dai on this address
-    const tenMillion = ethers.utils.parseEther("10000000");
+    //Impersonate to get WETH
+    const holder_weth = "0x8EB8a3b98659Cce290402893d0123abb75E3ab28"; //Avax Bridge : 100_000 Weth on this address
+    const thousand = ethers.utils.parseEther("1000");
     const beneficiaries = [users.owner.address];
     await this.giveTokenByImpersonating(
-      daiAddress,
-      holder_dai,
+      wethAddress,
+      holder_weth,
       beneficiaries,
-      tenMillion
+      thousand
     );
 
-    const Greeter = await ethers.getContractFactory("Greeter");
-    const greeter = await Greeter.deploy();
-    await greeter.deployed();
+    // //Impersonate to get DAI
+    // const holder_dai = "0x075e72a5eDf65F0A5f44699c7654C1a76941Ddc8"; //Avax Bridge : 250 M Dai on this address
+    // const tenMillion = ethers.utils.parseEther("10000000");
+    // const beneficiaries = [users.owner.address];
+    // await this.giveTokenByImpersonating(
+    //   daiAddress,
+    //   holder_dai,
+    //   beneficiaries,
+    //   tenMillion
+    // );
+
+    // const Greeter = await ethers.getContractFactory("Greeter");
+    // const greeter = await Greeter.deploy();
+    // await greeter.deployed();
 
     const currentContracts = this.contracts || {};
     this.contracts = {
       ...currentContracts,
-      ...{ greeter, dai },
+      ...{ weth, dai },
     };
   };
 
