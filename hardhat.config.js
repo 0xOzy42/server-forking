@@ -55,13 +55,13 @@ module.exports = {
     localhost: {
       chainId: 31337, // Chain ID should match the hardhat network's chainid
       forking: {
-        url: `https://mainnet.infura.io/v3/XXXXXXXXXXXXXXXXXXX`,
+        url: `https://rpc.ankr.com/eth`,
       },
       loggingEnabled: true,
     },
     hardhat: {
       forking: {
-        url: `https://mainnet.infura.io/v3/XXXXXXXXXXXXXXXXXXXX`,
+        url: `https://rpc.ankr.com/eth`,
       },
     },
   },
