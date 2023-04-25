@@ -1,0 +1,190 @@
+{
+  "abi": [],
+  "allSourcePaths": {
+    "0": "contracts/Greeter.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Greeter.sol",
+    "exportedSymbols": {
+      "Greeter": [
+        5
+      ]
+    },
+    "id": 6,
+    "license": "Unlicense",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Greeter",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "Greeter",
+        "nameLocation": "105:7:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "mutability": "mutable",
+            "name": "value",
+            "nameLocation": "127:5:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 5,
+            "src": "119:17:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "119:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "35",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "135:1:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_5_by_1",
+                "typeString": "int_const 5"
+              },
+              "value": "5"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 6,
+        "src": "96:43:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "37:103:0"
+  },
+  "bytecode": "60806040526005600055348015601457600080fd5b50603f8060226000396000f3fe6080604052600080fdfea264697066735822122008db3b61c38aa46b11535703db1a23eb24a8efdddc3b7d9ce1bffa7388e0140b64736f6c63430008120033",
+  "bytecodeSha1": "237604b5b3aded1e43b2f75132da84a3a558ee5f",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.18+commit.87f61d96"
+  },
+  "contractName": "Greeter",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {}
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600080fdfea264697066735822122008db3b61c38aa46b11535703db1a23eb24a8efdddc3b7d9ce1bffa7388e0140b64736f6c63430008120033",
+  "deployedSourceMap": "96:43:0:-:0;;;;;",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    96,
+    139
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 ADDMOD 0xDB EXTCODESIZE PUSH2 0xC38A LOG4 PUSH12 0x11535703DB1A23EB24A8EFDD 0xDC EXTCODESIZE PUSH30 0x9CE1BFFA7388E0140B64736F6C6343000812003300000000000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        96,
+        139
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        96,
+        139
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        96,
+        139
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        96,
+        139
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        96,
+        139
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        96,
+        139
+      ],
+      "op": "REVERT",
+      "path": "0"
+    }
+  },
+  "sha1": "7b1426d8c77c1b71c3307d0126b1bf1d90e44edb",
+  "source": "//SPDX-License-Identifier: Unlicense\npragma solidity ^0.8.0;\n\n// import \"hardhat/console.sol\";\n\ncontract Greeter {\n    uint256 value = 5;\n}\n",
+  "sourceMap": "96:43:0:-:0;;;135:1;119:17;;96:43;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/Greeter.sol",
+  "type": "contract"
+}

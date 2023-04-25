@@ -1,8 +1,3 @@
-const dotenv = require("dotenv");
-require("@nomiclabs/hardhat-waffle");
-require("hardhat-gas-reporter");
-require("solidity-coverage");
-dotenv.config();
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -31,24 +26,6 @@ module.exports = {
           },
         },
       },
-      {
-        version: "0.7.6",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 500,
-          },
-        },
-      },
-      {
-        version: "0.4.23",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 500,
-          },
-        },
-      },
     ],
   },
   networks: {
@@ -64,11 +41,5 @@ module.exports = {
         url: `https://rpc.ankr.com/eth`,
       },
     },
-  },
-  gasReporter: {
-    currency: "USD",
-    gasPrice: 21,
-    outputFile: "./gasReporting.md",
-    noColors: true,
   },
 };
